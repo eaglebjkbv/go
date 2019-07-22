@@ -15,8 +15,8 @@ func main() {
 		panic(err.Error())
 	}
 	defer db.Close()
-
-	rows, err := db.Query("Select * from plcdeger")
+	//rows, err := db.Query("insert into plcdeger(tarih,saat,deger) values('2019.07.22','16:10','550')")
+	rows, err := db.Query("SELECT * FROM plcdeger ORDER BY id")
 	for rows.Next() {
 		var (
 			id    string
