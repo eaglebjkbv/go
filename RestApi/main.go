@@ -51,6 +51,6 @@ func main() {
 	// rt.HandleFunc("ogrenciler", ogrenciGuncelle).Methods("PUT")
 	// rt.HandleFunc("ogrenciler", ogrenciSil).Methods("DELETE")
 
-	http.ListenAndServe(":8000", rt)
+	http.ListenAndServe(":80", rt)
 
 }

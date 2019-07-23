@@ -7,14 +7,14 @@ import (
 )
 
 type mesaj struct {
-	mesajNo     string
-	mesajIcerik string
+	MesajNo     int
+	MesajIcerik string
 }
 
 func index(w http.ResponseWriter, r *http.Request) {
-	msj := mesaj{mesajNo: "Deneme",
-		mesajIcerik: "Naber Nasılsın"}
-	fmt.Println(msj.mesajIcerik)
+	msj := mesaj{MesajNo: 1,
+		MesajIcerik: "Naber Nasılsın"}
+	fmt.Println(msj.MesajIcerik)
 	tmpl := template.Must(template.ParseFiles("template/layout.gohtml"))
 	tmpl.Execute(w, msj)
 
