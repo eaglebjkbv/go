@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Document</title>
+</head>
+<body>
+    <h1>Öğrenci Numarası :{{.Id}}</h1>
+    <h1>Öğrenci Adı : {{.Ad}}</h1>
+    <h1>Öğrenci Soyadı : {{.Soyad}}</h1>
+
+    <h3>Ders Adı     Ders Notu</h3>
+    {{with .Notlari}}
+    {{range .}}
+    <h3>{{.DersAdi}} {{.DersNotu}}</h3>
+    {{end}}
+    {{end}}
+    <h3>Kayıltı Telefon Numaraları :</h3>
+    {{range .Telno}}
+        {{.}}, 
+    {{end}}
+
+
+</body>
+</html>
